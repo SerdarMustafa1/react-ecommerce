@@ -43,7 +43,9 @@ class SignUp extends Component {
         confirmPassword: '',
       });
     } catch (error) {
+      console.log('====================================');
       console.error(error);
+      console.log('====================================');
     }
   };
 
@@ -92,6 +94,7 @@ class SignUp extends Component {
             label="Confirm Password"
             required
           />
+          {/* {error ? <h6>{error.message}</h6> : ''} */}
           <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
       </div>
