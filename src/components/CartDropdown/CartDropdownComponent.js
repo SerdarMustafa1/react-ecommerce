@@ -4,6 +4,7 @@ import CustomButton from '../CustomButton/CustomButton';
 
 import './CartDropdownStyles.scss';
 import CartItem from 'components/CartItem/CartItemComponent';
+import { selectCartItems } from 'store/cart/cart.selectors';
 
 const CartDropdown = ({ cartItems }) => (
   <div className="cart-dropdown">
@@ -15,8 +16,8 @@ const CartDropdown = ({ cartItems }) => (
   </div>
 );
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-  cartItems,
+const mapStateToProps = state => ({
+  cartItems: selectCartItems(state),
 });
 
 export default connect(mapStateToProps)(CartDropdown);
