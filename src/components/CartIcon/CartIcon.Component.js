@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { toggleCartHidden } from 'store/cart/cart.actions';
+import { toggleCartHidden } from 'redux/cart/cart.actions';
 import { ReactComponent as ShoppingIcon } from 'assets/shoppingbag.svg';
-import { selectCartItemsCount } from 'store/cart/cart.selectors';
+import { selectCartItemsCount } from 'redux/cart/cart.selectors';
 
 import './CartIconStyles.scss';
 

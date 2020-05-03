@@ -7,8 +7,8 @@ import { auth } from '../../firebase/firebase.utils';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import CartIcon from '../CartIcon/CartIcon.Component';
 import CartDropdown from '../CartDropdown/CartDropdownComponent';
-import { selectCartHidden } from 'store/cart/cart.selectors';
-import { selectCurrentUser } from 'store/user/user.selectors';
+import { selectCartHidden } from 'redux/cart/cart.selectors';
+import { selectCurrentUser } from 'redux/user/user.selectors';
 import './HeaderStyles.scss';
 
 const Header = ({ currentUser, hidden }) => (
