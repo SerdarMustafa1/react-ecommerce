@@ -8,8 +8,9 @@ import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import './SignUpStyles.scss';
 
 class SignUp extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+
     this.state = {
       displayName: '',
       email: '',
@@ -24,7 +25,7 @@ class SignUp extends Component {
     const { displayName, email, password, confirmPassword } = this.state;
 
     if (password !== confirmPassword) {
-      alert('Passwords do not match');
+      alert("passwords don't match");
       return;
     }
 
@@ -43,14 +44,12 @@ class SignUp extends Component {
         confirmPassword: '',
       });
     } catch (error) {
-      console.log('====================================');
       console.error(error);
-      console.log('====================================');
     }
   };
 
-  handleChange = e => {
-    const { name, value } = e.target;
+  handleChange = event => {
+    const { name, value } = event.target;
 
     this.setState({ [name]: value });
   };
@@ -94,7 +93,6 @@ class SignUp extends Component {
             label="Confirm Password"
             required
           />
-          {/* {error ? <h6>{error.message}</h6> : ''} */}
           <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
       </div>
