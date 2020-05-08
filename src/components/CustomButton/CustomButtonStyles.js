@@ -42,7 +42,7 @@ const getButtonStyles = props => {
   return props.inverted ? invertedButtonStyles : buttonStyles;
 };
 
-export const CustomButtomContainer = styled.button`
+export const CustomButtonContainer = styled.button`
   min-width: 165px;
   width: auto;
   height: 50px;
