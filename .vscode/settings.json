@@ -1,5 +1,7 @@
 {
   "deepcode.review.results.hideInformationIssues": false,
   "editor.fontFamily": "Fira Code",
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": true
 }
