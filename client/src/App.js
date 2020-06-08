@@ -1,5 +1,3 @@
-import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundaryComponent';
-
 import React, { lazy, Suspense, useEffect } from 'react';
 
 import { connect } from 'react-redux';
@@ -11,8 +9,9 @@ import { selectCurrentUser } from 'redux/user/user.selectors';
 
 import { createStructuredSelector } from 'reselect';
 
-import Header from './components/HeaderComponent/HeaderComponent';
-import Spinner from './components/Spinner/SpinnerComponent';
+import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundaryComponent';
+import Header from 'components/HeaderComponent/HeaderComponent';
+import Spinner from 'components/Spinner/SpinnerComponent';
 
 import { GlobalStyle } from './global.styles';
 
